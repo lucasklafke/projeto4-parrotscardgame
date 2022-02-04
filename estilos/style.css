@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@700&display=swap');
+body{
+    background-color: #EEF9BF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 13px;
+    color:#75B79E;
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 100px;
+    justify-content: space-evenly;
+}
+div{
+    width: 117px;
+    height: 146px;
+    background-color: #A7E9AF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #99CEA8;
+    margin-top: 34px;
+    margin-right: 34px;
+
+}
+div img{
+    width: 100px;
+    height: 100px;
+    
+}
+.otherside{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+@media only screen and (max-width: 630px) {
+    h1{
+        font-size: 36px;
+    }
+  }
