@@ -21,7 +21,7 @@ section{
     margin: 0 100px;
     justify-content: space-evenly;
 }
-div{
+.frontCard{
     width: 117px;
     height: 146px;
     background-color: #A7E9AF;
@@ -32,7 +32,6 @@ div{
     border: 1px solid #99CEA8;
     margin-top: 34px;
     margin-right: 34px;
-
 }
 div img{
     width: 100px;
@@ -40,8 +39,6 @@ div img{
     
 }
 .otherside{
-    width: 100px;
-    height: 100px;
     background-color: red;
 }
 
@@ -50,3 +47,7 @@ div img{
         font-size: 36px;
     }
   }
+
+.unicorn,.bobross,.explody,.metal{
+    z-index: 1; 
+}
