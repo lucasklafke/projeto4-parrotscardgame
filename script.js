@@ -7,6 +7,7 @@ let listAux = []
 let finishList = []
 let id = 0
 let cardList = []
+let counter = 0
 // validade qtcard to see if the quantity >4 14< and the number is pair
 function validateCards(qtCards){
     if (qtCards % 2 != 0){
@@ -31,8 +32,8 @@ do{
 function pushCards(){
     for( i=0; i < qtCards/2; i += 1){
         let section = document.querySelector("section")
-        card = `<div class="frontCard ${trueFaces[i]}" id="${calcID(id)}" onclick="applyGame(this)"><img src="${image}"></img></div>`
-        card2 = `<div class="frontCard ${trueFaces[i]}" id="${calcID(id)}" onclick="applyGame(this)"><img src="${image}"></img></div>`
+        card = `<div class="frontCard ${trueFaces[i]}" id="${calcID(id)}" data-identifier="card" onclick="applyGame(this)"><img src="${image}"></img></div>`
+        card2 = `<div class="frontCard ${trueFaces[i]}" id="${calcID(id)}" data-identifier="card" onclick="applyGame(this)"><img src="${image}"></img></div>`
         cardList.push(card)
         cardList.push(card2)  
     }
@@ -50,6 +51,7 @@ function createCards(qtCards){
 function endAlert(){
     if(finishList.length == qtCards/2){
         window.alert("terminou o jogo")
+        window.alert(`você terminou o jogo em ${counter} jogadas`)
     }
 }
 // comparator to function random cards
@@ -100,6 +102,7 @@ function parTrue(selected){
 }
 //function that create game interactions
 function applyGame(selected){
+    counter += 1
     let cardSelected = selected
     switchImageTrue(selected)
     listAux.push(selected)
